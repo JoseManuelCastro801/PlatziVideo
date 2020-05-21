@@ -1,0 +1,20 @@
+{
+  "name": "PlatziVideo",
+  "version": "1.0.0",
+  "description": "Curso de ReactJS de Platzi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoseManuelCastro801/PlatziVideo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoseManuelCastro801/PlatziVideo/issues"
+  },
+  "homepage": "https://github.com/JoseManuelCastro801/PlatziVideo#readme"
+}
