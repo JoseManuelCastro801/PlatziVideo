@@ -6,4 +6,4 @@ import Home from './components/Home'
 
 
 //render recibe dos parametro , unos es el componente (ej : Home) y el otro indica donde lo va representar
-ReactDOM.render(<Home/>, document.getElementById(app))
+ReactDOM.render(<Home/>, document.getElementById('app'))
