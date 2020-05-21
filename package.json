@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/JoseManuelCastro801/PlatziVideo/issues"
   },
-  "homepage": "https://github.com/JoseManuelCastro801/PlatziVideo#readme"
+  "homepage": "https://github.com/JoseManuelCastro801/PlatziVideo#readme",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
 }
