@@ -1,8 +1,9 @@
 import React from 'react'
+import Header from './Header'
 import '../assets/styles/app.scss'
 
 const Home = () => (
-    <h1>Esta el la portada</h1>
+    <Header></Header>
 );
 
 export default Home;
