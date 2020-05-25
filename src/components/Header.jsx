@@ -1,15 +1,19 @@
 import React from 'react'
-import '../assets/styles/header.scss'
+import '../assets/styles/components/Header.scss'
 
 const Header = () => (
-    <header class="header">
-        <img class="header__img" src="https://www.flaticon.es/premium-icon/icons/svg/2920/2920847.svg" alt="ImagenHardPoint"/>
-        <nav class="header__nav">
-            <a class="rainbow-button" href="/" alt=""></a>
-            <a class="rainbow-button" href="/" alt=""></a>
-            <a class="rainbow-button" href="/" alt=""></a>
-            <input type="search" placeholder="Busca tu Archivo" id="Buscador" />
-        </nav>
+    <header className="header">
+        <img className="header__img" src="../assets/logo-platzi-video-BW2.png" alt="Platzi Video"/>
+        <div className="header__menu">
+        <div className="header__menu--profile">
+            <img src="../assets/user-icon.png" alt=""/>
+            <p>Perfil</p>
+        </div>
+        <ul>
+            <li><a href="/">Cuenta</a></li>
+            <li><a href="/">Cerrar Sesión</a></li>
+        </ul>
+        </div>
     </header>
 );
 

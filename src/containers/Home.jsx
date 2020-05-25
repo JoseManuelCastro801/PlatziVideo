@@ -1,12 +1,12 @@
 import React from 'react'
-import Header from './Header'
-import Banner from './Banner'
+import Header from '../components/Header'
+
 import '../assets/styles/app.scss'
 
 const Home = () => (
     <div>
     <Header></Header>
-    <Banner></Banner>
+    
     </div>
 );
 
