@@ -1,12 +1,12 @@
-import React, { Children } from 'react'
+import React from 'react'
 
 import '../assets/styles/components/Categories.scss'
 
-const Categories = ({Children}) => (
+const Categories = ({children}) => (
 
-    <div>
+    <div className="Categories">
         <h3 className="categories__title">Mi lista</h3>
-        {Children}
+            {children}       
     </div>
     
 
