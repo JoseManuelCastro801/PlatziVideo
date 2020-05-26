@@ -13,14 +13,25 @@ const Home = () => (
     <div>
     <Header></Header>
     <Search></Search>
-    <Categories>
+    <Categories title="Mi lista">
         <Carousel>
             <CarouselItem/>
             <CarouselItem/>
             <CarouselItem/>
             <CarouselItem/>
             <CarouselItem/>
+        </Carousel>
+    </Categories>
+    <Categories title="Recomendados">
+        <Carousel>
             <CarouselItem/>
+            <CarouselItem/>
+            <CarouselItem/>
+            <CarouselItem/>
+        </Carousel>
+    </Categories>
+    <Categories title="Vistos">
+        <Carousel>
             <CarouselItem/>
             <CarouselItem/>
             <CarouselItem/>
