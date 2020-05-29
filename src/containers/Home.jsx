@@ -11,44 +11,35 @@ import '../assets/styles/app.scss'
 
 const Home = () =>{
 
-    const [videos , setVideos] = useState([])
+    const [items , setItems] = useState({
+        'categories' : [],
+        'nombre' : '',
+        'videos' : []
+    });
 
     useEffect(() =>{
         fetch("http://localhost:3000/initalState")
         .then(response => response.json())
-        .then(data => setVideos(data))
+        .then(data => setItems(data))
     },[]);
 
-    console.log(videos)
+    console.log(items)
 
     return(
         <div>
         <Header></Header>
         <Search></Search>
-        <Categories title="Mi lista">
-            <Carousel>
-                <CarouselItem/>
-                <CarouselItem/>
-                <CarouselItem/>
-                <CarouselItem/>
-                <CarouselItem/>
-            </Carousel>
-        </Categories>
-        <Categories title="Recomendados">
-            <Carousel>
-                <CarouselItem/>
-                <CarouselItem/>
-                <CarouselItem/>
-                <CarouselItem/>
-            </Carousel>
-        </Categories>
-        <Categories title="Vistos">
-            <Carousel>
-                <CarouselItem/>
-                <CarouselItem/>
-                <CarouselItem/>
-            </Carousel>
-        </Categories>
+        {
+            items.categories.map(valor => 
+                <Categories key={valor.id} title={valor.nombre} >
+                    <Carousel key={valor.id}>
+                        {valor.videos.map(video => 
+                            <CarouselItem key={video.id} {...video} />
+                            )}
+                    </Carousel>
+                </Categories>
+                )
+        }
         <Footer/>
         </div>
     );
