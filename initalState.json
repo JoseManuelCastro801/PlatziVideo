@@ -3,12 +3,12 @@
     "categories": [
       {
         "id": 0,
-        "nombre": "mylist",
+        "nombre": "My List",
         "videos": []
       },
       {
-        "id": 0,
-        "nombre": "trends",
+        "id": 1,
+        "nombre": "Trends",
         "videos": [
           {
             "id": 2,
@@ -91,8 +91,8 @@
         ]
       },
       {
-        "id": 0,
-        "nombre": "original",
+        "id": 2,
+        "nombre": "Original",
         "videos": [
           {
             "id": 8,

@@ -14,7 +14,7 @@ const Home = () =>{
     const [items , setItems] = useState({
         'categories' : [],
         'nombre' : '',
-        'videos' : []
+        'videos' : [1]
     });
 
     useEffect(() =>{
@@ -23,21 +23,24 @@ const Home = () =>{
         .then(data => setItems(data))
     },[]);
 
-    console.log(items)
-
     return(
         <div>
         <Header></Header>
         <Search></Search>
         {
-            items.categories.map(valor => 
-                <Categories key={valor.id} title={valor.nombre} >
-                    <Carousel key={valor.id}>
-                        {valor.videos.map(video => 
-                            <CarouselItem key={video.id} {...video} />
-                            )}
-                    </Carousel>
-                </Categories>
+            items.categories.map(valor => {
+                        if(valor.videos.length > 0){
+                            return(                    
+                            <Categories key={valor.id} title={valor.nombre} >
+                                <Carousel key={valor.id}>
+                                    {valor.videos.map(video => 
+                                        <CarouselItem key={video.id} {...video} />
+                                        )}
+                                </Carousel>
+                            </Categories>)
+                        }
+                    }
+
                 )
         }
         <Footer/>
