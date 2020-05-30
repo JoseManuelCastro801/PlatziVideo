@@ -1,6 +1,6 @@
 import { useState , useEffect} from 'react'
 
-const setInitialState = (API) => {
+const useInitialState = (API) => {
 
     const [items , setItems] = useState({
         'categories' : [],
@@ -18,4 +18,4 @@ const setInitialState = (API) => {
 }
 
 
-export default setInitialState;
+export default useInitialState;

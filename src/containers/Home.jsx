@@ -6,7 +6,7 @@ import Carousel from '../components/Carousel'
 import CarouselItem from '../components/CarouselItem'
 import Footer from '../components/Footer'
 
-import setInitialState from '../helpers/setInitialSatate.js'
+import useInitialState from '../Hooks/useInitialSatate.js'
 
 import '../assets/styles/app.scss'
 
@@ -14,14 +14,14 @@ import '../assets/styles/app.scss'
 const Home = () =>{
 
     const API = "http://localhost:3000/initalState";
-    const intialState = setInitialState(API);
+    const InitialState = useInitialState(API);
 
     return(
         <div>
         <Header></Header>
         <Search></Search>
         {
-            intialState.categories.map(valor => {
+            InitialState.categories.map(valor => {
                         if(valor.videos.length > 0){
                             return(                    
                             <Categories key={valor.id} title={valor.nombre} >
