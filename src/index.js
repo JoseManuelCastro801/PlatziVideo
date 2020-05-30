@@ -2,8 +2,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 //Se importa el componente Home de la carpeta .\components\
-import Home from './containers/Home'
+import App from './routes/App'
 
 
 //render recibe dos parametro , unos es el componente (ej : Home) y el otro indica donde lo va representar
-ReactDOM.render(<Home/>, document.getElementById('app'))
+ReactDOM.render(<App/>, document.getElementById('app'))
