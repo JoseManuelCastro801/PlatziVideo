@@ -18,7 +18,6 @@ const Home = () =>{
 
     return(
         <div>
-        <Header></Header>
         <Search></Search>
         {
             InitialState.categories.map(valor => {
@@ -36,7 +35,6 @@ const Home = () =>{
 
                 )
         }
-        <Footer/>
         </div>
     );
 } 
