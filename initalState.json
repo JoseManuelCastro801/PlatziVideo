@@ -2,12 +2,22 @@
   "initalState": {
     "categories": [
       {
-        "id": 0,
+        "id": 1,
+        "nombre": "User",
+        "videos": []
+      },
+      {
+        "id": 2,
+        "nombre": "Playing",
+        "videos": []
+      },
+      {
+        "id": 3,
         "nombre": "My List",
         "videos": []
       },
       {
-        "id": 1,
+        "id": 4,
         "nombre": "Trends",
         "videos": [
           {
@@ -91,7 +101,7 @@
         ]
       },
       {
-        "id": 2,
+        "id": 5,
         "nombre": "Original",
         "videos": [
           {

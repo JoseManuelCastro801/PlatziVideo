@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { connect } from 'react-redux'
 import Search from '../components/Search'
 import Categories from '../components/Categories'
 import Carousel from '../components/Carousel'
@@ -9,16 +10,15 @@ import useInitialState from '../Hooks/useInitialSatate.js'
 import '../assets/styles/app.scss'
 
 
-const Home = () =>{
+const Home = ({ categories }) =>{
 
-    const API = "http://localhost:3000/initalState";
-    const InitialState = useInitialState(API);
 
+    console.log(categories);
     return(
         <div>
         <Search></Search>
         {
-            InitialState.categories.map(valor => {
+            categories.map(valor => {
                         if(valor.videos.length > 0){
                             return(                    
                             <Categories key={valor.id} title={valor.nombre} >
@@ -36,4 +36,10 @@ const Home = () =>{
     );
 } 
 
-export default Home;
+const mapStateToProps = state => {
+    return{
+        categories : state.categories
+    };
+};
+
+export default connect(mapStateToProps, null)(Home); 
