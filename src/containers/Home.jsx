@@ -12,14 +12,13 @@ import '../assets/styles/app.scss'
 
 const Home = ({ categories }) =>{
 
-
-    console.log(categories);
+    console.log(categories)
     return(
         <div>
         <Search></Search>
         {
             categories.map(valor => {
-                        if(valor.videos.length > 0){
+                       
                             return(                    
                             <Categories key={valor.id} title={valor.nombre} >
                                 <Carousel key={valor.id}>
@@ -28,7 +27,7 @@ const Home = ({ categories }) =>{
                                         )}
                                 </Carousel>
                             </Categories>)
-                        }
+                        
                     }
                 )
         }

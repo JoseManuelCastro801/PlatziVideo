@@ -195,7 +195,7 @@ const initialState = {
       ]
 }
 
-const store = createStore(reducer , initialState)
+const store = createStore(reducer , initialState , window.REDUX_DEVTOOLS_EXTENSION && window.REDUX_DEVTOOLS_EXTENSION())
 
 //render recibe dos parametro , unos es el componente (ej : Home) y el otro indica donde lo va representar
 ReactDOM.render(
