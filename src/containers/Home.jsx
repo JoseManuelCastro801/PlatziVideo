@@ -12,20 +12,19 @@ import '../assets/styles/app.scss'
 
 const Home = ({ categories }) =>{
 
-    console.log(categories)
     return(
         <div>
         <Search></Search>
         {
             categories.map(valor => {
-                       
-                            return(                    
+                       if(valor.videos.length> 0 )
+                            return(     
                             <Categories key={valor.id} title={valor.nombre} >
-                                <Carousel key={valor.id}>
-                                    {valor.videos.map(video => 
-                                        <CarouselItem key={video.id} {...video} />
+                                        <Carousel key={valor.id}>
+                                        {valor.videos.map((video , i) => 
+                                            <CarouselItem key={i} {...video} isList/>
                                         )}
-                                </Carousel>
+                                    </Carousel>
                             </Categories>)
                         
                     }
