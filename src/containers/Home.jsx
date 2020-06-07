@@ -17,16 +17,43 @@ const Home = ({ categories }) =>{
         <Search></Search>
         {
             categories.map(valor => {
-                       if(valor.videos.length> 0 )
-                            return(     
+                      if(valor.videos.length> 0 ){
+                          if(valor.id == 3){
+                              return(
                             <Categories key={valor.id} title={valor.nombre} >
+                                <Carousel key={valor.id}>
+                                    {valor.videos.map((video , i) => {
+                                        return(
+                                            <CarouselItem 
+                                            key={i} 
+                                            {...video} 
+                                            isList
+                                        />
+                                        )
+                                    }
+                                    )}
+                                </Carousel>
+                        </Categories>)
+                          }else{
+                            return(     
+                                <Categories key={valor.id} title={valor.nombre} >
                                         <Carousel key={valor.id}>
-                                        {valor.videos.map((video , i) => 
-                                            <CarouselItem key={i} {...video} isList/>
-                                        )}
-                                    </Carousel>
-                            </Categories>)
-                        
+                                            {valor.videos.map((video , i) => {
+                                                return(
+                                                    <CarouselItem 
+                                                    key={i} 
+                                                    {...video}
+                                                    isList={false} 
+                                                />
+                                                )
+                                            }
+                                            )}
+                                        </Carousel>
+                                </Categories>
+                            )
+                          }
+
+                        }
                     }
                 )
         }
