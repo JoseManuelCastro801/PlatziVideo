@@ -11,7 +11,7 @@ import '../assets/styles/app.scss'
 
 
 const Home = ({ categories }) =>{
-
+    console.log(categories)
     return(
         <div>
         <Search></Search>

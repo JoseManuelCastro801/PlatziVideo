@@ -11,7 +11,7 @@ const initialState = {
     "categories": [
         {
           "id": 1,
-          "nombre": "User",
+          "nombre": "",
           "videos": []
         },
         {
