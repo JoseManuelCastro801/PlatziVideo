@@ -26,3 +26,10 @@ export const logOutRequest = payload => (
         payload
     }
 )
+
+export const register = payload => (
+    {
+        type : 'REGISTER',
+        payload
+    }
+)
