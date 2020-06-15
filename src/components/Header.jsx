@@ -1,16 +1,20 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { logOutRequest } from '../actions'
 import '../assets/styles/components/Header.scss'
 import logo from '../assets/static/logo-platzi-video-BW2.png'
 import userIcon from '../assets/static/user-icon.png'
 import { Link } from 'react-router-dom';
 import gravater from '../utils/gravater.js'
 
-const Header = ({ categories }) =>{
+const Header = (props) =>{
 
+    const { categories } = props
     const user = categories[0].nombre;
 
-    console.log(user)
+    const handleLogOut = () => {
+        props.logOutRequest("")
+    }
 
     return(
         <header className="header">
@@ -34,16 +38,20 @@ const Header = ({ categories }) =>{
                 
             </div>
             <ul>
-                <li>
-                    <Link to="/login">
-                    Cuenta
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/login">
-                    Iniciar sesion
-                    </Link>
-                </li>
+                {
+                    user ?
+                    <li>
+                        <a href="#logOut" onClick={handleLogOut}>LogOut</a>                        
+                    </li>
+                    :
+                    <li>
+                        <Link to="/login">
+                            Iniciar sesion
+                        </Link>
+                    </li>
+                }
+
+                
             </ul>
             </div>
         </header>
@@ -56,4 +64,8 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps,null)(Header)
+const mapDispathToProps  = {
+    logOutRequest,
+}
+
+export default connect(mapStateToProps,mapDispathToProps)(Header)

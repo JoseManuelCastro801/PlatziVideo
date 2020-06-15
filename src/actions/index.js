@@ -19,3 +19,10 @@ export const LoginRequest = payload => (
     payload
     }    
 )
+
+export const logOutRequest = payload => (
+    {
+        type : 'LOGOUT_REQUEST',
+        payload
+    }
+)
