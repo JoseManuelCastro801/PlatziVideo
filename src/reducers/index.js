@@ -28,7 +28,6 @@ const reducer = (state, action) => {
       return{...state , categories}
 
     case "REGISTER":
-      console.log(action.payload)
       categories[0].nombre = action.payload.email
       return{...state , categories}
 
