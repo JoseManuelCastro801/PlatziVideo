@@ -20,9 +20,7 @@ const reducer = (state, action) => {
       return { ...state, categories };
 
     case "LOGIN_REQUEST":
-      console.log(action.payload)
       categories[0].nombre =  action.payload.email
-      console.log(state)
       return {...state , categories}
 
     default:

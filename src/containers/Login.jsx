@@ -23,7 +23,7 @@ const Login = (props) => {
   const handleSubmit = (evento) => {
     evento.preventDefault();
     props.LoginRequest(form);
-    //props.history.push("/")
+    props.history.push("/");
   } 
 
   return(
